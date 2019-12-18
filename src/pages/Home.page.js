@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DataCard from '../components/data-card.component';
 
 class HomePage extends Component {
     constructor(props) {
@@ -87,16 +88,7 @@ class HomePage extends Component {
                     {
                         this.state.cardsData.map((card, i) => {
                             return (
-                                <div className="col-md-4" key={i}>
-                                    <div className="card">
-                                    <img height={300} src={card.imageUrl} className="card-img-top" alt="..." />
-                                        <div className="card-body">
-                                            <h5 className="card-title">{card.title}</h5>
-                                            <p className="card-text">{card.description}</p>
-                                            <a href="#" class="btn bg-dark text-white">Visit Page</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <DataCard key={i} title={card.title} description={card.description} image={card.imageUrl} />
                             )
                         })
                     }
