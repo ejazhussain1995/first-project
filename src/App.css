@@ -24,10 +24,28 @@
   color: white;
 }
 
+
+.page-footer {
+  background-color: #282c34;
+  color: #fff;
+  padding: 25px  0;
+}
+.test-class {
+  color: blue;
+}
 .App-link {
   color: #61dafb;
 }
-
+.card {
+  margin-bottom: 20px;
+  transition: all ease .7s;
+  cursor: pointer;
+}
+.card:hover {
+  -webkit-box-shadow: -2px -4px 18px 4px rgba(0,0,0,0.42);
+-moz-box-shadow: -2px -4px 18px 4px rgba(0,0,0,0.42);
+box-shadow: -2px -4px 18px 4px rgba(0,0,0,0.42);
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
