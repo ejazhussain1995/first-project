@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProductCard from '../sections/products.section';
 import ReviewSection from '../sections/reviews.section';
+import ShowCase from '../sections/showcase.section'
 
 class HomePage extends Component {
     constructor(props) {
@@ -128,28 +129,48 @@ class HomePage extends Component {
     }
     render() {
         return (
-            <div className="container my-5">
-                <h1>PRODUCT</h1>
-                <div className="row">
-                    {
-                        this.state.product.map((card, i) => {
-                            return (
-                                <ProductCard key={i} title={card.title} description={card.description} image={card.imageUrl} />
-                            )
-                        })
-                    }
+            <div className="container-fluid">
+                <div className="product-sec">
+                    <div className="container">
+                        <h1>PRODUCT</h1>
+                        <div className="row">
+                            {
+                                this.state.product.map((card, i) => {
+                                    return (
+                                        <ProductCard key={i} titleTwo={card.title} description={card.description} image={card.imageUrl} />
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
                 </div>
-                <h1>REVIEWS</h1>
-                <div className="row">
-                    {
-                        this.state.reviews.map((reviewcard, i) => {
-                            return (
-                                <ReviewSection key={i} name={reviewcard.name} comment={reviewcard.comment} image={reviewcard.imageUrl} />
-                            )
-                        })
-                    }
+                <div className="showcase-sec">
+                    <div className="container">
+                        <h1>ENGAGE</h1>
+                        <div className="row">
+                            <ShowCase />
+                        </div>
+                    </div>
                 </div>
-
+                <div className="review-sec"  style={{  
+                            backgroundImage: "url(" + "https://www.elegantthemes.com/images/bloom/bloom-templates-fw.jpg" + ")",
+                            backgroundPosition: 'center',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat'
+                            }}>
+                    <div className="container">
+                        <h1>PRODUCT</h1>
+                        <div className="row">
+                            {
+                                this.state.reviews.map((reviewcard, i) => {
+                                    return (
+                                        <ReviewSection key={i} name={reviewcard.name} comment={reviewcard.comment} image={reviewcard.imageUrl} />
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
