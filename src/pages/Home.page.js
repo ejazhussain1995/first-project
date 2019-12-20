@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import DataCard from '../components/data-card.component';
+import ProductCard from '../sections/products.section';
+import ReviewSection from '../sections/reviews.section';
 
 class HomePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cardsData: [
+            product: [
                 {
                     id: 1,
                     imageUrl: "https://images.pexels.com/photos/3353994/pexels-photo-3353994.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -78,21 +79,77 @@ class HomePage extends Component {
                     title: "Title # 12",
                     description: "This is description # 3",
                 }
+            ],
+            reviews: [
+                {
+                    id: 1,
+                    name: "User 1",
+                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
+                    comment: "this is a comment",
+                    date: "20/12/2019"
+                },
+                {
+                    id: 1,
+                    name: "User 2",
+                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
+                    comment: "this is a comment",
+                    date: "20/12/2019"
+                },
+                {
+                    id: 1,
+                    name: "User 3",
+                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
+                    comment: "this is a comment",
+                    date: "20/12/2019"
+                },
+                {
+                    id: 1,
+                    name: "User 4",
+                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
+                    comment: "this is a comment",
+                    date: "20/12/2019"
+                },
+                {
+                    id: 1,
+                    name: "User 5",
+                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
+                    comment: "this is a comment",
+                    date: "20/12/2019"
+                },
+                {
+                    id: 1,
+                    name: "User 6",
+                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
+                    comment: "this is a comment",
+                    date: "20/12/2019"
+                }
             ]
         }
     }
     render() {
         return (
             <div className="container my-5">
+                <h1>PRODUCT</h1>
                 <div className="row">
                     {
-                        this.state.cardsData.map((card, i) => {
+                        this.state.product.map((card, i) => {
                             return (
-                                <DataCard key={i} title={card.title} description={card.description} image={card.imageUrl} />
+                                <ProductCard key={i} title={card.title} description={card.description} image={card.imageUrl} />
                             )
                         })
                     }
                 </div>
+                <h1>REVIEWS</h1>
+                <div className="row">
+                    {
+                        this.state.reviews.map((reviewcard, i) => {
+                            return (
+                                <ReviewSection key={i} name={reviewcard.name} comment={reviewcard.comment} image={reviewcard.imageUrl} />
+                            )
+                        })
+                    }
+                </div>
+
             </div>
         )
     }

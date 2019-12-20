@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DataCard = (props) => {
+const ProductCard = (props) => {
     return (
         <div className="col-md-4" key={props.key}>
             <div className="card">
@@ -15,4 +15,4 @@ const DataCard = (props) => {
     )
 }
 
-export default DataCard;
+export default ProductCard;
