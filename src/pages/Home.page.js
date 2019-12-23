@@ -129,7 +129,7 @@ class HomePage extends Component {
     }
     render() {
         return (
-            <div className="container-fluid">
+            <div className="">
                 <div className="product-sec">
                     <div className="container">
                         <h1>PRODUCT</h1>
@@ -144,14 +144,6 @@ class HomePage extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="showcase-sec">
-                    <div className="container">
-                        <h1>ENGAGE</h1>
-                        <div className="row">
-                            <ShowCase />
-                        </div>
-                    </div>
-                </div>
                 <div className="review-sec"  style={{  
                             backgroundImage: "url(" + "https://www.elegantthemes.com/images/bloom/bloom-templates-fw.jpg" + ")",
                             backgroundPosition: 'center',
@@ -159,7 +151,7 @@ class HomePage extends Component {
                             backgroundRepeat: 'no-repeat'
                             }}>
                     <div className="container">
-                        <h1>PRODUCT</h1>
+                        <h1>REVIEWS</h1>
                         <div className="row">
                             {
                                 this.state.reviews.map((reviewcard, i) => {

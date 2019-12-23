@@ -76,6 +76,12 @@ h1 {
 .review-sec{
  padding: 100px 0;
 }
+.review-sec h1 {
+  color: #d39e00;
+    font-size: 46px;
+    font-weight: 700;
+    background: radial-gradient(#0062cc, rgba(0,123,255,.25));
+}
 .showcase {
   margin-top: 50px;
   text-align: left;
