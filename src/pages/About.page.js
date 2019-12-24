@@ -5,7 +5,7 @@ class AboutPage extends React.Component {
         return (
             <React.Fragment>
                 <div>
-                    About Page
+                    <img style={{maxWidth:'100%'}} src='https://www.impactbnd.com/hubfs/blog-image-uploads/best-about-us-pages.jpg' />
                 </div>
             </React.Fragment>
         );

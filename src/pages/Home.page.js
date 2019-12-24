@@ -80,50 +80,6 @@ class HomePage extends Component {
                     title: "Title # 12",
                     description: "This is description # 3",
                 }
-            ],
-            reviews: [
-                {
-                    id: 1,
-                    name: "User 1",
-                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
-                    comment: "this is a comment",
-                    date: "20/12/2019"
-                },
-                {
-                    id: 1,
-                    name: "User 2",
-                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
-                    comment: "this is a comment",
-                    date: "20/12/2019"
-                },
-                {
-                    id: 1,
-                    name: "User 3",
-                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
-                    comment: "this is a comment",
-                    date: "20/12/2019"
-                },
-                {
-                    id: 1,
-                    name: "User 4",
-                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
-                    comment: "this is a comment",
-                    date: "20/12/2019"
-                },
-                {
-                    id: 1,
-                    name: "User 5",
-                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
-                    comment: "this is a comment",
-                    date: "20/12/2019"
-                },
-                {
-                    id: 1,
-                    name: "User 6",
-                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSGuOjzz605qtEaVmwwxXWZtwXzGI5eVdjM1Qp5ySKQJEKPHqQ&s",
-                    comment: "this is a comment",
-                    date: "20/12/2019"
-                }
             ]
         }
     }
@@ -138,25 +94,6 @@ class HomePage extends Component {
                                 this.state.product.map((card, i) => {
                                     return (
                                         <ProductCard key={i} titleTwo={card.title} description={card.description} image={card.imageUrl} />
-                                    )
-                                })
-                            }
-                        </div>
-                    </div>
-                </div>
-                <div className="review-sec"  style={{  
-                            backgroundImage: "url(" + "https://www.elegantthemes.com/images/bloom/bloom-templates-fw.jpg" + ")",
-                            backgroundPosition: 'center',
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat'
-                            }}>
-                    <div className="container">
-                        <h1>REVIEWS</h1>
-                        <div className="row">
-                            {
-                                this.state.reviews.map((reviewcard, i) => {
-                                    return (
-                                        <ReviewSection key={i} name={reviewcard.name} comment={reviewcard.comment} image={reviewcard.imageUrl} />
                                     )
                                 })
                             }
