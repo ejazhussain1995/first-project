@@ -7,6 +7,7 @@ import Footer from './components/Footer.component';
 import AboutPage from './pages/About.page';
 import EngagePage from './pages/Engage.page';
 import ReviewPage from './pages/Review.page';
+import ProductDetail from './pages/ProductDetail.page';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/engage" component={EngagePage} />
           <Route exact path="/review" component={ReviewPage} />
+          <Route exact path="/detail" component={ProductDetail} />
         </Switch>
         <Footer />
       </BrowserRouter>

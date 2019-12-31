@@ -19,9 +19,9 @@ const NavBar = (obj) => {
                 <span className="text-white">{obj.title}</span>
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span cclassNamelass="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
             </button>
-            <div claclassNamess="collapse navbar-collapse" id="navbarNav">
+            <div className="collapse navbar-collapse d-flex align-items-center justify-content-end" id="navbarNav">
                 <ul className="navbar-nav text-white">
                     <li className="nav-item">
                         <Link className="text-white" to="/">Home</Link>
